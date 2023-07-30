@@ -1,6 +1,6 @@
 # CrackDenseLinkNet
 ## Title
-CrackDenseLinkNet: A deep convolutional neural network for semantic segmentation of cracks on concrete surface images
+<p align="justify"> CrackDenseLinkNet: A deep convolutional neural network for semantic segmentation of cracks on concrete surface images </p>
 
 ## Abstract
 <p align="justify">
