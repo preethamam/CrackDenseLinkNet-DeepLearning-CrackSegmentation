@@ -8,7 +8,28 @@ Cracks are the defects formed by cyclic loading, fatigue, shrinkage, creep, and 
 </p>
 
 ## CrackDenseLinkNet modules Python installation and usage
+# Setting up Environment
 
+Please make sure you have installed Anaconda and have Python version `3.8.5` before following next steps
+
+```shell
+cd conda_venv
+conda env create -f environment.yml
+conda activate dl_crack
+
+# Install dependencies
+cat requirements.txt | xargs -n 1 pip install
+
+# Work on the project
+
+# Deactivate the virtual environment when you are done
+conda deactivate
+
+```
+
+Note that few of the path specific packages may fail during `pip`. Ignore those failure messages and let it terminate by itself. It should install all the necessary packages required to run the below documented scripts.
+
+However, by any chance if still you get package errors then just install that package through pip or conda.
 
 
 ## CrackDenseLinkNet and other methods trained model/weights files
