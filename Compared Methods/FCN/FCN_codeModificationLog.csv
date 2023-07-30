@@ -1,0 +1,31 @@
+# python FCN_finetune.py --mode=finetune --learning_rate=1e-4 --num_of_epoch=20 --batch_size=2
+# python FCN_finetune.py --mode=predict --test_dir=testing/DS3/TestingCracks
+date,directory,fileName,manipulation_rowNum,manipulation_type,manipulation
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_model.py,3,m,"import tensorflow.compat.v1 as tf"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_model.py,13,a,"allow_pickle=True"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,3,m,"import tensorflow.compat.v1 as tf"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,13,a,"allow_pickle=True"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,30,a,"delattr(FLAGS, 'log_dir')  # remove 'log_dir' from absl.logging"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,4,a,"tf.disable_v2_behavior()"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_layers.py,3,m,"import tensorflow.compat.v1 as tf"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,3,a,"import imageio"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,91,m,"image = imageio.imread(image_file, pilmode='RGB')"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,42,m,"image = imageio.imread(image_file)"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,44,m,"resize_image = np.array(Image.fromarray(image).resize((self.width, self.height), Image.BILINEAR)).astype(np.double)"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,6,a,"from PIL import Image"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,9,a,"from PIL import Image"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,192,commented
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,192,a,"resized_image = np.array(Image.fromarray(image).resize((FLAGS.image_width, FLAGS.image_height), Image.BILINEAR)).astype(np.double)"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,211,commented
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,212,a,"new_image = np.array(Image.fromarray((image*255).astype(np.uint8)).resize((new_size[1], new_size[0]), Image.BILINEAR)).astype(np.double)"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,212,m,"imageio.imwrite(file_name, new_image)"
+02.07.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,8,a,"import imageio"
+02.08.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,122,a,"print(...)"
+02.09.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,57,m,"if image_file[-3:] == 'png' and "Groundtruth" in image_file:"
+02.09.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,54,m,"assert resize_image.shape == (224, 224, 3), print(image_file, resize_image.shape)"
+02.09.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,58,m,"assert resize_image.shape == (224, 224, 1), print(image_filei, resize_image.shape)"
+02.09.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,54,a,"if resize_image.shape == (224, 224, 1): resize_image = np.stack((resize_image,)*3, axis=3).reshape(224, 224, 3)"
+02.09.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,58,a,"if resize_image.shape == (224, 224, 3): resize_image = resize_image[:,:,0].reshape(224, 224, 1)"
+02.12.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_finetune.py,212,a,"file_name = file_name.split("/") file_name[-2] = "pred"  file_name = "/".join(file_name) print("8"*80, file_name)"
+02.12.2021,/media/preethamam/Utilities/Xtreme_Programming/Bolong/github_repo/FCN_for_crack_recognition/,FCN_DatasetReader.py,84,note,"jpg/png"
+
