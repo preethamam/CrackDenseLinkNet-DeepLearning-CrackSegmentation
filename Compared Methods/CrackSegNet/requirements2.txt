@@ -1,0 +1,9 @@
+h5py
+Keras
+numpy
+scikit-image
+scikit-learn
+tensorflow-gpu
+scipy
+pandas
+Pillowpip 
