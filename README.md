@@ -20,7 +20,7 @@ Cracks are the defects formed by cyclic loading, fatigue, shrinkage, creep, and 
 ## CrackDenseLinkNet dataset only
 
 ## Citation
-CrackDenseLinkNet code and dataset are available to the public. If you use this code/dataset in your research, please use the following BibTeX entry to cite:
+CrackDenseLinkNet code and/or dataset are available to the public. If you use this code/dataset in your research, please use the following BibTeX entry to cite:
 ```bibtex
 @article{manjunatha2023crackdenselinknet,
 author = {Preetham Manjunatha and Sami F Masri and Aiichiro Nakano and Landon Carter Wellford},
