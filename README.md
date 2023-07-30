@@ -22,7 +22,7 @@ Cracks are the defects formed by cyclic loading, fatigue, shrinkage, creep, and 
 ## Citation
 CrackDenseLinkNet dataset is available to the public. If you use this dataset in your research, please use the following BibTeX entry to cite:
 ```bibtex
-@article{preethsm2023crackdenselinknet,
+@article{preetham2023crackdenselinknet,
 author = {Preetham Manjunatha and Sami F Masri and Aiichiro Nakano and Landon Carter Wellford},
 title ={CrackDenseLinkNet: a deep convolutional neural network for semantic segmentation of cracks on concrete surface images},
 journal = {Structural Health Monitoring},
