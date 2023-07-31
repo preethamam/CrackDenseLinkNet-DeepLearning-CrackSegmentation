@@ -29,7 +29,7 @@ In this study, four datasets were used to evaluate the crack segmentation capabi
 
 CrackDenseLinkNet dataset consists of 250 testing images of a concrete surface. In this dataset, the cracks have a stronger contrast, texture, and wider cracks relative to the other datasets. About 249 images have high textural content out of 250. The FCN dataset is primarily of the concrete surface and consists of 154 testing crack samples that vary in size, out of which 6 and 148 images have low and high texture, respectively. In this dataset, crack widths are thin and thicker. Furthermore, it consists of longitudinal, transverse, and surface cracks. All the images are of high quality. However, it was observed that some of the groundtruth images were wrongly labeled (labels are thicker than the actual width of the cracks). 
 
-Similar to the FCN dataset, the DeepCrack dataset consists of 237 testing samples of various longitudinal, transverse, and surface cracks. About 78 and 22% of the images have concrete and asphalt material surfaces, 20 respectively. The crack width varies largely across the images of this dataset. Around 21 and 216 images in this dataset have low and high textures, respectively. Lastly, CrackSegNet consists of 184 testing images of the concrete surface, 5 and 179 images of low and high texture, respectively. The crack width of this dataset is relatively thinner compared to the other datasets. This is the most challenging dataset to train the semantic segmentation CNN methods, as it contains highly blurry images, textural noise, and paint artifacts. This dataset was purposefully included to assess the limitations of all five methods in comparison.
+Similar to the FCN dataset, the DeepCrack dataset consists of 237 testing samples of various longitudinal, transverse, and surface cracks. About 78 and 22% of the images have concrete and asphalt material surfaces, respectively. The crack width varies largely across the images of this dataset. Around 21 and 216 images in this dataset have low and high textures, respectively. Lastly, CrackSegNet consists of 184 testing images of the concrete surface, 5 and 179 images of low and high texture, respectively. The crack width of this dataset is relatively thinner compared to the other datasets. This is the most challenging dataset to train the semantic segmentation CNN methods, as it contains highly blurry images, textural noise, and paint artifacts. This dataset was purposefully included to assess the limitations of all five methods in comparison.
 
 | ![All data](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/3b2c953f-e499-434f-9bfb-0ea701ecd9a7) | 
 |:--:| 
@@ -53,3 +53,10 @@ URL = {https://doi.org/10.1177/14759217231173305},
 eprint = {https://doi.org/10.1177/14759217231173305},
 }
 ```
+
+## References
+<a id="1">[1]</a> Yang X, Li H, Yu Y, et al. Automatic pixel-level crack detection and measurement using fully convolutional network. Comput-Aided Civ Infrastruct Eng 2018; 33(12): 1090–1109.
+
+<a id="2">[2]</a> Liu Y, Yao J, Lu X, et al. Deepcrack: a deep hierarchical feature learning architecture for crack segmentation. Neurocomputing 2019; 338: 139–153.
+
+<a id="3">[3]</a> Ren Y, Huang J, Hong Z, et al. Image-based concrete crack detection in tunnels using deep fully convolutional networks. Constr Build Mater 2020; 234: 117367.
