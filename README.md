@@ -51,7 +51,14 @@ Similar to the FCN dataset, the DeepCrack dataset consists of 237 testing sample
 |:--:| 
 | *Datasets’ sample images: (a) FCN, (b) DeepCrack, (c) CrackSegNet, and (d) CrackDenseLinkNet.* |
 | Download Link: [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp)  |
+
 ## CrackDenseLinkNet dataset only
+| ![All data](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/3b2c953f-e499-434f-9bfb-0ea701ecd9a7) | 
+|:--:| 
+| *Sample images from the CrackDenseLinkNet dataset.* |
+| Download Link: [CrackDenseLinkNet](https://1drv.ms/f/s!AqjW7B7BO7JJgYE_8gNllyMtjNA-4Q?e=jOrONx)  |
+
+
 
 ## Citation
 CrackDenseLinkNet code and dataset are available to the public. If you use this code/dataset in your research, please use the following BibTeX entry to cite:
