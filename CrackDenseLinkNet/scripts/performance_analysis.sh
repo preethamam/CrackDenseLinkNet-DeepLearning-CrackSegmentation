@@ -30,11 +30,11 @@ if [ $DATA = "all" ]; then
     python test.py \
         --model Linknet\
         --backbone densenet169 \
-        --data_dir "${DATA_DIR}DS3" \
+        --data_dir "${DATA_DIR}CDLN" \
         --device_num $DEVICE_NUM
 
     python performance_analysis.py \
-        --data "DS3"
+        --data "CDLN"
 
     python test.py \
         --model Linknet\
