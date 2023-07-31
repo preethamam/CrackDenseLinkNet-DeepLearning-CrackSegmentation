@@ -9,7 +9,7 @@ echo $BACKBONE
 echo $DATA_DIR
 echo $DEVICE_NUM
 
-python tail_test.py \
+python test.py \
     --model $MODEL \
     --backbone $BACKBONE \
     --data_dir $DATA_DIR \
