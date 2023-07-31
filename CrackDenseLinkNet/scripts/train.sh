@@ -13,7 +13,7 @@ echo $EPOCHS
 echo $DATA_DIR
 echo $DEVICE_NUM
 
-python tail_train.py \
+python train.py \
     --model $MODEL \
     --backbone $BACKBONE \
     --batch_size $BATCH_SIZE \
