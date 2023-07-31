@@ -24,6 +24,7 @@ This should install all the necessary packages required to run the below-documen
 
 
 ## CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet datasets combined for training, validation, and testing
+
 In this study, four datasets were used to evaluate the crack segmentation capability of five CNN-based semantic segmentation networks. Datasets FCN,21 DeepCrack,20 and CrackSegNet48 are available to public. In addition, the proposed method dataset CrackDenseLinkNet is currently private (it will be made public during the publication) and created around the University of Southern California campus. The complexity of images varies gradually from CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet. Figure 2 shows the four datasets’ sample images. 
 
 CrackDenseLinkNet dataset consists of 250 testing images of a concrete surface. In this dataset, the cracks have a stronger contrast, texture, and wider cracks relative to the other datasets. About 249 images have high textural content out of 250. The FCN dataset is primarily of the concrete surface and consists of 154 testing crack samples that vary in size, out of which 6 and 148 images have low and high texture, respectively. In this dataset, crack widths are thin and thicker. Furthermore, it consists of longitudinal, transverse, and surface cracks. All the images are of high quality. However, it was observed that some of the groundtruth images were wrongly labeled (labels are thicker than the actual width of the cracks). 
