@@ -25,7 +25,7 @@ This should install all the necessary packages required to run the below-documen
 
 ## CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet datasets combined for training, validation, and testing
 <p align="justify">
-In this study, four datasets were used to evaluate the crack segmentation capability of five CNN-based semantic segmentation networks. Datasets FCN [1], DeepCrack [2], and CrackSegNet [3] are available to public. In addition, the proposed method dataset CrackDenseLinkNet is currently private (it will be made public during the publication) and created around the University of Southern California campus. The complexity of images varies gradually from CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet. Figure below shows the four datasets’ sample images. 
+In this study, four datasets were used to evaluate the crack segmentation capability of five CNN-based semantic segmentation networks. Datasets FCN [1], DeepCrack [2], and CrackSegNet [3] are available to public. In addition, the proposed method dataset CrackDenseLinkNet was created around the University of Southern California campus. The complexity of images varies gradually from CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet. Figure below shows the four datasets’ sample images. 
 </p>
 
 <p align="justify">
