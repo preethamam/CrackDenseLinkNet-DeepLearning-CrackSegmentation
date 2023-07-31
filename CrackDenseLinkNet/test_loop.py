@@ -121,7 +121,7 @@ if __name__ == "__main__":
     
     ### Dataset directory
     DATA_DIR = args.data_dir
-    LOGS_DIR_PATH = '/media/preethamam/Utilities-SSD-1/Xtreme_Programming/Preetham/Deep Learning/CrackDenseLinkNet-Paper/CrackDenseLinkNet/logs'
+    LOGS_DIR_PATH = '/logs'
     logs_dir_folders = os.listdir(LOGS_DIR_PATH)
     print(args)
 
