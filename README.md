@@ -19,6 +19,8 @@ conda activate crackdenselinknet
 
 This should install all the necessary packages required to run the below-documented scripts. However, by any chance, if still you get package errors then just install that package through pip or conda.
 
+### Usage
+Please place the [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) within the CrackDenseLinkNet folder, or if the datasets are placed somewhere else, please change the `DATA_DIR`, `VALIND_DIR`, `VALID_DIR` in the `train.py` and  `DATA_DIR` in the `test.py` files. If you want to test o multiple model/weight files, please use the `test_loop.py` and change the `DATA_DIR` accordingly.
 
 ## CrackDenseLinkNet and other methods trained model/weights files
 
