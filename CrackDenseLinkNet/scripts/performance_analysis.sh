@@ -1,6 +1,6 @@
 DATA=$1
 DEVICE_NUM=$2
-DATA_DIR="/media/preethamam/Utilities-SSD-1/Xtreme_Programming/ZZZ_Data/DLCrack/Liu+Xincong+DS3+CrackSegNet/Testing/"
+DATA_DIR="/Liu+Xincong+DS3+CrackSegNet/Testing/"
 ALL="all"
 
 echo $DATA
