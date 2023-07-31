@@ -24,8 +24,9 @@ This should install all the necessary packages required to run the below-documen
 
 
 ## CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet datasets combined for training, validation, and testing
-
-
+| ![All data](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/3b2c953f-e499-434f-9bfb-0ea701ecd9a7) | 
+|:--:| 
+| *Datasets’ sample images: (a) FCN, (b) DeepCrack, (c) CrackSegNet, and (d) CrackDenseLinkNet.* |
 ## CrackDenseLinkNet dataset only
 
 ## Citation
