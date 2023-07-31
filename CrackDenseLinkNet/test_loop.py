@@ -53,7 +53,7 @@ def add_args(parser):
     parser.add_argument(
         "--data_dir",
         type=str,
-        default="/media/preethamam/Utilities-SSD-2/Xtreme_Programming/ZZZ_Data/DLCrack/Liu+Xincong+DS3+CrackSegNet/Testing/",
+        default="/Liu+Xincong+CrackSegNet+CDLN/Testing/",
         help="Directory of Dataset which contains Testing and Ground Truth sub folders",
     )
 
