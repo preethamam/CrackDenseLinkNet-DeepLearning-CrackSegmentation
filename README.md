@@ -68,7 +68,7 @@ CrackDenseLinkNet dataset consists of 707, 79, and 250 training, validation, and
 
 | Original Images | Groundtruth Images |
 | --- | --- |
-| ![Original](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/e56f442a-df50-4dfa-82cc-866d106ef03d) {:height="1175px" width="590px"} | ![Groundtruth](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/49bc8dd0-ecc6-4e68-b46a-859e06656381) {:height="1175px" width="590px"} |
+|![Original](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/e56f442a-df50-4dfa-82cc-866d106ef03d)|![Groundtruth](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/49bc8dd0-ecc6-4e68-b46a-859e06656381)|
 
 ## Citation
 CrackDenseLinkNet code and dataset are available to the public. If you use this code/dataset in your research, please use the following BibTeX entry to cite:
