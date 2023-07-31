@@ -33,9 +33,7 @@ This should install all the necessary packages required to run the below-documen
 Place the [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) within the [CrackDenseLinkNet](CrackDenseLinkNet) folder, or if the datasets are placed somewhere else, please change the `DATA_DIR`, `VALIND_DIR`, `VALID_DIR` in the `train.py` and  `DATA_DIR` in the `test.py` files. If you want to test o multiple model/weight files, please use the `test_loop.py` and change the `DATA_DIR` accordingly. To execute the [CrackDenseLinkNet](CrackDenseLinkNet) program either run the `train.py`, `test.py`, and/or `test_loop.py` in the IDE or use the `shell scripts` in the [scripts](CrackDenseLinkNet/scripts) folder.
 
 ## CrackDenseLinkNet and other methods trained model/weights files
-<p align="justify">
 The trained weights files of the FCN, DeepCrack, FPHB, CrackSegNet, and CrackDenseLinket methods on the [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) are provided below in the table:
-</p>
 
 | Method | Dataset | Link   |
 |:------------:|:-----------:|:------:|
