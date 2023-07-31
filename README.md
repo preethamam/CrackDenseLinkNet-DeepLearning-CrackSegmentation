@@ -32,7 +32,16 @@ This should install all the necessary packages required to run the below-documen
 Place the [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) within the [CrackDenseLinkNet](CrackDenseLinkNet) folder, or if the datasets are placed somewhere else, please change the `DATA_DIR`, `VALIND_DIR`, `VALID_DIR` in the `train.py` and  `DATA_DIR` in the `test.py` files. If you want to test o multiple model/weight files, please use the `test_loop.py` and change the `DATA_DIR` accordingly. To execute the [CrackDenseLinkNet](CrackDenseLinkNet) program either run the `train.py`, `test.py`, and/or `test_loop.py` in the IDE or use the `shell scripts` in the [scripts](CrackDenseLinkNet/scripts) folder.
 
 ## CrackDenseLinkNet and other methods trained model/weights files
+The trained weights files of the FCN, DeepCrack, FPHB, CrackSegNet, and CrackDenseLinket methods on the [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) are provided below in the table:
 
+
+| Method | Dataset | Link   |
+|:------------:|:-----------:|:------:|
+| FCN  | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchPFEscznC-jAsOQw?e=oy1Gxf) |
+| DeepCrack  | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchTMoV4WTWF0ZwkCA?e=VPD1W2) |
+| CrackSegNet | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchSem0dN_8J-BbQHw?e=nJfxv8) |
+| FPHB | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchUy6zdBktoxzjilg?e=8vQZmv) |
+| CrackDenseLinket  | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchWkY4-oWga_t1uFw?e=ncvp2P) |
 
 ## CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet datasets combined for training, validation, and testing
 <p align="justify">
