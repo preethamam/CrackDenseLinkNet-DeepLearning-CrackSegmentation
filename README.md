@@ -37,11 +37,11 @@ The trained weights files of the FCN, DeepCrack, FPHB, CrackSegNet, and CrackDen
 
 | Method | Dataset | Link   |
 |:------------:|:-----------:|:------:|
-| FCN  | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchPFEscznC-jAsOQw?e=oy1Gxf) |
-| DeepCrack  | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchTMoV4WTWF0ZwkCA?e=VPD1W2) |
-| CrackSegNet | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchSem0dN_8J-BbQHw?e=nJfxv8) |
-| FPHB | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchUy6zdBktoxzjilg?e=8vQZmv) |
-| CrackDenseLinket  | [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchWkY4-oWga_t1uFw?e=ncvp2P) |
+| FCN  | Liu+Xincong+CrackSegNet+CDLN | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchPFEscznC-jAsOQw?e=oy1Gxf) |
+| DeepCrack  | Liu+Xincong+CrackSegNet+CDLN | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchTMoV4WTWF0ZwkCA?e=VPD1W2) |
+| CrackSegNet | Liu+Xincong+CrackSegNet+CDLN | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchSem0dN_8J-BbQHw?e=nJfxv8) |
+| FPHB | Liu+Xincong+CrackSegNet+CDLN | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchUy6zdBktoxzjilg?e=8vQZmv) |
+| CrackDenseLinket  | Liu+Xincong+CrackSegNet+CDLN | [weights](https://1drv.ms/f/s!AqjW7B7BO7JJgchWkY4-oWga_t1uFw?e=ncvp2P) |
 
 ## CrackDenseLinkNet, FCN, DeepCrack, and CrackSegNet datasets combined for training, validation, and testing
 <p align="justify">
