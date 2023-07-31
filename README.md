@@ -13,7 +13,6 @@ Cracks are the defects formed by cyclic loading, fatigue, shrinkage, creep, and 
 Please make sure you have installed Anaconda and have Python version `> 3.8.5` before following the next steps
 
 ```shell
-cd conda_venv
 conda env create -f crackdenselinknet.yml
 conda activate crackdenselinknet
 ```
