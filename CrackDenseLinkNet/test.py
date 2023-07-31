@@ -53,7 +53,7 @@ def add_args(parser):
     parser.add_argument(
         "--data_dir",
         type=str,
-        default="/media/preethamam/Utilities-SSD-1/Xtreme_Programming/ZZZ_Data/DLCrack/Liu+Xincong+DS3+CrackSegNet/Testing/",
+        default="/Liu+Xincong+CrackSegNet+CDLN/Testing/",
         help="Directory of Dataset which contains Testing and Ground Truth sub folders",
     )
 
@@ -134,8 +134,8 @@ if __name__ == "__main__":
         exit(-1)
 
     ### Testing data
-    x_test_dir = os.path.join(DATA_DIR, "DS3", "TestingCracks")
-    y_test_dir = os.path.join(DATA_DIR, "DS3", "TestingCracksGroundtruth")
+    x_test_dir = os.path.join(DATA_DIR, "CDLN", "TestingCracks")
+    y_test_dir = os.path.join(DATA_DIR, "CDLN", "TestingCracksGroundtruth")
 
     ### We have only one class - crack - binary segmentation problem [0 - no crack, 1 - crack]
     CLASSES = ["crack"]
