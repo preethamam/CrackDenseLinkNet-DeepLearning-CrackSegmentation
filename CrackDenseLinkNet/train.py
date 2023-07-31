@@ -50,7 +50,7 @@ def add_args(parser):
     parser.add_argument('--device_num', type=str, default="2",
                         help='gpu_server_num')
 
-    parser.add_argument('--data_dir', type=str, default="/media/preethamam/Utilities-SSD-2/Xtreme_Programming/ZZZ_Data/DLCrack/Liu+Xincong+DS3+CrackSegNet",
+    parser.add_argument('--data_dir', type=str, default="/Liu+Xincong+CrackSegNet+CDLN",
                         help='Directory of Dataset which contains Testing and Ground Truth sub folders')
 
     args = parser.parse_args()
@@ -175,14 +175,14 @@ if __name__ == "__main__":
         logging.info('Failed to load data...')
         exit(-1)
     
-    DATA_DIR = "/media/preethamam/Utilities-SSD-2/Xtreme_Programming/ZZZ_Data/DLCrack/Liu+Xincong+DS3+CrackSegNet"
+    DATA_DIR = "/Liu+Xincong+CrackSegNet+CDLN"
 
     # Training data
     x_train_dir = os.path.join(DATA_DIR, 'TrainingCracks')
     y_train_dir = os.path.join(DATA_DIR, 'TrainingCracksGroundtruth')
 
     # Validation data
-    VALIND_DIR = "/media/preethamam/Utilities-SSD-2/Xtreme_Programming/ZZZ_Data/DLCrack/Liu+Xincong+DS3+CrackSegNet/ValidationCracksIndividual"
+    VALIND_DIR = "/Liu+Xincong+CrackSegNet+CDLN/ValidationCracksIndividual"
     x_valid_dir_Xincong = os.path.join(VALIND_DIR, 'Xincong','ValidCracks')
     y_valid_dir_Xincong = os.path.join(VALIND_DIR, 'Xincong', 'ValidCracksGroundtruth')
 
@@ -195,7 +195,7 @@ if __name__ == "__main__":
     x_valid_dir_Liu = os.path.join(VALIND_DIR, 'Liu', 'ValidCracks')
     y_valid_dir_Liu = os.path.join(VALIND_DIR, 'Liu','ValidCracksGroundtruth')
 
-    VALID_DIR = "/media/preethamam/Utilities-SSD-2/Xtreme_Programming/ZZZ_Data/DLCrack/Liu+Xincong+DS3+CrackSegNet"
+    VALID_DIR = "/Liu+Xincong+CrackSegNet+CDLN"
     x_valid_dir = os.path.join(VALID_DIR,  'ValidationCracks')
     y_valid_dir = os.path.join(VALID_DIR,  'ValidationCracksGroundtruth')
 
