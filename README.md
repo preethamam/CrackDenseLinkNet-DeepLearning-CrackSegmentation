@@ -25,15 +25,19 @@ Please make sure you have installed Anaconda and have Python version `> 3.8.5` b
 conda env create -f crackdenselinknet.yml
 conda activate crackdenselinknet
 ```
-
+<p align="justify">
 This should install all the necessary packages required to run the below-documented scripts. However, by any chance, if still you get package errors then just install that package through pip or conda.
+</p>
 
 ### Usage
+<p align="justify">
 Place the [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) within the [CrackDenseLinkNet](CrackDenseLinkNet) folder, or if the datasets are placed somewhere else, please change the `DATA_DIR`, `VALIND_DIR`, `VALID_DIR` in the `train.py` and  `DATA_DIR` in the `test.py` files. If you want to test o multiple model/weight files, please use the `test_loop.py` and change the `DATA_DIR` accordingly. To execute the [CrackDenseLinkNet](CrackDenseLinkNet) program either run the `train.py`, `test.py`, and/or `test_loop.py` in the IDE or use the `shell scripts` in the [scripts](CrackDenseLinkNet/scripts) folder.
+</p>
 
 ## CrackDenseLinkNet and other methods trained model/weights files
+<p align="justify">
 The trained weights files of the FCN, DeepCrack, FPHB, CrackSegNet, and CrackDenseLinket methods on the [Liu+Xincong+CrackSegNet+CDLN](https://1drv.ms/f/s!AqjW7B7BO7JJgYFAAz4d-8xCQIseKQ?e=YRBszp) are provided below in the table:
-
+</p>
 
 | Method | Dataset | Link   |
 |:------------:|:-----------:|:------:|
@@ -63,7 +67,7 @@ Similar to the FCN dataset, the DeepCrack dataset consists of 237 testing sample
 
 ## CrackDenseLinkNet dataset only
 <p align="justify">
-CrackDenseLinkNet dataset consists of 707, 79, and 250 training, validation, and testing images of a concrete surface. In this dataset, the cracks have a stronger contrast, texture, and wider cracks relative to the other datasets used in this study. About 249 images have high textural content out of 250. The download link is provided below.
+CrackDenseLinkNet dataset consists of 707, 79, and 250 training, validation, and testing images of a concrete surface with their corresponding pixel-wise semantic annotations/labels. In this dataset, the cracks have a stronger contrast, texture, and wider cracks relative to the other datasets used in this study. About 249 images have high textural content out of 250. The download link is provided below.
 </p>
 
 | ![All data](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/3b2c953f-e499-434f-9bfb-0ea701ecd9a7) | 
