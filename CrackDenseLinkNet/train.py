@@ -186,8 +186,8 @@ if __name__ == "__main__":
     x_valid_dir_Xincong = os.path.join(VALIND_DIR, 'Xincong','ValidCracks')
     y_valid_dir_Xincong = os.path.join(VALIND_DIR, 'Xincong', 'ValidCracksGroundtruth')
 
-    x_valid_dir_DS3 = os.path.join(VALIND_DIR, 'DS3', 'ValidCracks')
-    y_valid_dir_DS3 = os.path.join(VALIND_DIR, 'DS3','ValidCracksGroundtruth')
+    x_valid_dir_DS3 = os.path.join(VALIND_DIR, 'CDLN', 'ValidCracks')
+    y_valid_dir_DS3 = os.path.join(VALIND_DIR, 'CDLN','ValidCracksGroundtruth')
 
     x_valid_dir_CrackSegNet = os.path.join(VALIND_DIR, 'CrackSegNet', 'ValidCracks')
     y_valid_dir_CrackSegNet = os.path.join(VALIND_DIR, 'CrackSegNet','ValidCracksGroundtruth')
