@@ -66,8 +66,10 @@ Similar to the FCN dataset, the DeepCrack dataset consists of 237 testing sample
 CrackDenseLinkNet dataset consists of 707, 79, and 250 training, validation, and testing images of a concrete surface with their corresponding pixel-wise semantic annotations/labels. In this dataset, the cracks have a stronger contrast, texture, and wider cracks relative to the other datasets used in this study. About 249 images have high textural content out of 250. The download link is provided below.
 </p>
 
-| ![All data](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/3b2c953f-e499-434f-9bfb-0ea701ecd9a7) | 
-|:--:| 
+| Original Images | Groundtruth Images|
+| ![Original](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/e56f442a-df50-4dfa-82cc-866d106ef03d)
+| ![Groundtruth](https://github.com/preethamam/CrackDenseLinkNet-DeepLearning-CrackSegmentation/assets/28588878/e9150b5a-3973-45a8-ad01-d15b73b8a45f) |
+|:--:|:--:| 
 | *Sample images from the CrackDenseLinkNet dataset.* |
 | Download Link: [CrackDenseLinkNet](https://1drv.ms/f/s!AqjW7B7BO7JJgYE_8gNllyMtjNA-4Q?e=jOrONx)  |
 
