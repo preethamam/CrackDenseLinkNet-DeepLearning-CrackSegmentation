@@ -186,8 +186,8 @@ if __name__ == "__main__":
     x_valid_dir_Xincong = os.path.join(VALIND_DIR, 'Xincong','ValidCracks')
     y_valid_dir_Xincong = os.path.join(VALIND_DIR, 'Xincong', 'ValidCracksGroundtruth')
 
-    x_valid_dir_DS3 = os.path.join(VALIND_DIR, 'CDLN', 'ValidCracks')
-    y_valid_dir_DS3 = os.path.join(VALIND_DIR, 'CDLN','ValidCracksGroundtruth')
+    x_valid_dir_CDLN = os.path.join(VALIND_DIR, 'CDLN', 'ValidCracks')
+    y_valid_dir_CDLN = os.path.join(VALIND_DIR, 'CDLN','ValidCracksGroundtruth')
 
     x_valid_dir_CrackSegNet = os.path.join(VALIND_DIR, 'CrackSegNet', 'ValidCracks')
     y_valid_dir_CrackSegNet = os.path.join(VALIND_DIR, 'CrackSegNet','ValidCracksGroundtruth')
@@ -255,9 +255,9 @@ if __name__ == "__main__":
         augmentation=get_validation_augmentation(),
         preprocessing=get_preprocessing(preprocess_input),
     )
-    valid_dataset_DS3 = Dataset(
-        x_valid_dir_DS3,
-        y_valid_dir_DS3,
+    valid_dataset_CDLN = Dataset(
+        x_valid_dir_CDLN,
+        y_valid_dir_CDLN,
         classes=CLASSES,
         augmentation=get_validation_augmentation(),
         preprocessing=get_preprocessing(preprocess_input),
@@ -269,7 +269,7 @@ if __name__ == "__main__":
     valid_dataloader_Liu = DataLoader(valid_dataset_Liu, batch_size=1, shuffle=False, num_workers=4)
     valid_dataloader_Xincong = DataLoader(valid_dataset_Xincong, batch_size=1, shuffle=False, num_workers=4)    
     valid_dataloader_CrackSegNet = DataLoader(valid_dataset_CrackSegNet, batch_size=1, shuffle=False, num_workers=4)
-    valid_dataloader_DS3 = DataLoader(valid_dataset_DS3, batch_size=1, shuffle=False, num_workers=4)
+    valid_dataloader_CDLN = DataLoader(valid_dataset_CDLN, batch_size=1, shuffle=False, num_workers=4)
 
     # create model
     model = create_model(args, n_classes, activation)
@@ -328,7 +328,7 @@ if __name__ == "__main__":
     valid_record = record(LossName)
     valid_record_Liu = record(LossName)
     valid_record_Xincong = record(LossName)
-    valid_record_DS3 = record(LossName)
+    valid_record_CDLN = record(LossName)
     valid_record_CrackSegNet = record(LossName)
     count = 0
     val_score_previous = -10
@@ -346,7 +346,7 @@ if __name__ == "__main__":
         valid_logs_Liu = valid_epoch.run(valid_dataloader_Liu)
         valid_logs_CrackSegNet = valid_epoch.run(valid_dataloader_CrackSegNet)
         valid_logs_Xincong = valid_epoch.run(valid_dataloader_Xincong)
-        valid_logs_DS3 = valid_epoch.run(valid_dataloader_DS3)
+        valid_logs_CDLN = valid_epoch.run(valid_dataloader_CDLN)
 
         #log detailed training information
         print(train_logs.keys())
@@ -355,7 +355,7 @@ if __name__ == "__main__":
         valid_record_Liu.log(valid_logs_Liu,i)
         valid_record_CrackSegNet.log(valid_logs_CrackSegNet, i)
         valid_record_Xincong.log(valid_logs_Xincong, i)
-        valid_record_DS3.log(valid_logs_DS3, i)
+        valid_record_CDLN.log(valid_logs_CDLN, i)
         
         ### Selecting metric to track for early stopping
         val_score = valid_logs['fscore']
@@ -365,7 +365,7 @@ if __name__ == "__main__":
             valid_record.write(save_dir, 'valid')
             valid_record_Liu.write(save_dir,'Liu')
             valid_record_Xincong.write(save_dir, 'Xincong')
-            valid_record_DS3.write(save_dir, 'DS3')
+            valid_record_CDLN.write(save_dir, 'CDLN')
             valid_record_CrackSegNet.write(save_dir, 'CrackSegNet')
             logging.info('Model Successfully Trained!')
         ### Record metrics
@@ -405,7 +405,7 @@ if __name__ == "__main__":
     valid_record.write(save_dir, 'valid')
     valid_record_Liu.write(save_dir,'Liu')
     valid_record_Xincong.write(save_dir, 'Xincong')
-    valid_record_DS3.write(save_dir, 'DS3')
+    valid_record_CDLN.write(save_dir, 'CDLN')
     valid_record_CrackSegNet.write(save_dir, 'CrackSegNet')
     logging.info('Model Successfully Trained!')
 
