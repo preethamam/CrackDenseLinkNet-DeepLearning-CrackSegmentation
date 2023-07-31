@@ -17,7 +17,7 @@ conda env create -f crackdenselinknet.yml
 conda activate crackdenselinknet
 ```
 
-Note that a few of the path-specific packages may fail during `pip`. Ignore those failure messages and let them terminate by themselves. It should install all the necessary packages required to run the below-documented scripts. However, by any chance, if still you get package errors then just install that package through pip or conda.
+This should install all the necessary packages required to run the below-documented scripts. However, by any chance, if still you get package errors then just install that package through pip or conda.
 
 
 ## CrackDenseLinkNet and other methods trained model/weights files
