@@ -78,7 +78,7 @@ def vistensor(tensor, save_dir, ch=0, allkernels=False, nrow=8, padding=1):
     rows = np.min( (tensor.shape[0]//nrow + 1, 64 )  )    
     grid = torchvision.utils.make_grid(tensor, nrow=nrow, normalize=True, padding=padding)
     plt.figure( figsize=(nrow,rows))
-    fig = plt.imshow(grid.numpy().transpose((1, 2, 0)), cmap=matplotlib.cm.jet, aspect='auto')
+    fig = plt.imshow(grid.cpu().numpy().transpose((1, 2, 0)), cmap=matplotlib.cm.jet, aspect='auto')
     save_plot(plt, fig, save_dir)
 
 def generate_filter_maps(conv_layers, weights, filter_dir, layer_num):
@@ -191,7 +191,7 @@ def add_args(parser):
                         help='gpu_server_num')
 
     # Add parser argument for "--data_dir"
-    parser.add_argument('--data_dir', type=str, default='./data//TestingCracks/',
+    parser.add_argument('--data_dir', type=str, default='./data/TestingCracks/',
                         help='Directory of Dataset which contains Testing Images')
 
     # Add parser argument for "--image_name"
@@ -279,6 +279,7 @@ if __name__ == "__main__":
 
 
     best_model = create_model(args, n_classes, activation)
+    best_model = nn.DataParallel(best_model, device_ids=[0])
     checkpoint = torch.load(PATH, map_location=DEVICE)
     best_model.load_state_dict(checkpoint['model_state_dict'])
 
@@ -307,10 +308,10 @@ if __name__ == "__main__":
     model_blocks = []
 
     # Append all the features of encoder to model_blocks
-    model_blocks.extend(best_model.encoder.features)
+    model_blocks.extend(best_model.module.encoder.features)
 
     # Append all the blocks of decoder to model_blocks
-    model_blocks.extend(best_model.decoder.blocks)
+    model_blocks.extend(best_model.module.decoder.blocks)
     
     print('Total blocks: ',  len(model_blocks))
 
