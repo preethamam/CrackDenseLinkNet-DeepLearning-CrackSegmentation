@@ -274,18 +274,12 @@ if __name__ == "__main__":
 
 
     model_blocks = []
-    #####################################################################################
-    # first-level blocks of decoder #
-    #####################################################################################
 
     # Append all the features of encoder to model_blocks
-    ### HINT: Printing model architecture / summary may help to find features to append
     for i in best_model.module.encoder.features:
         model_blocks.append(i)
 
-
     # Append all the blocks of decoder to model_blocks
-    ### HINT: Printing model architecture / summary may help to find blocks to append
     for i in best_model.module.decoder.blocks:
         model_blocks.append(i)
     
