@@ -28,11 +28,6 @@ def get_children(model: torch.nn.Module):
     """
 
     flatt_children = []    
-    #####################################################################################
-    # TODO:Flatten model architecutre and returns a list of all nested child layers #
-    #####################################################################################
-
-    # HINT: Think recursively to parse and append deeply nested children 
 
     # TIP: if model has no children; model is last child! :O, 
     #      else look for children from children...to the last child
@@ -42,11 +37,7 @@ def get_children(model: torch.nn.Module):
     else:
         for c in children:
             flatt_children.extend(get_children(c))
-
-    ####################################################################################
-    #                                   END OF YOUR CODE                               #
-    ####################################################################################    
-
+ 
     return flatt_children
 
 def save_plot(plt, fig, save_dir):
@@ -113,13 +104,6 @@ def generate_feature_maps(model_blocks, tensor, save_path, layer_num):
     Return:
         None
     """
-
-    ######################################################################################
-    # TODO: Generate and save feature map of the given layer number from image tensor #
-    ######################################################################################
-
-    # HINT: Iterating through the model blocks can help you get output of specific layer
-    # TIP: You can use the given save plot function after populating the feature map plot
     for i in range(layer_num):
         tensor = model_blocks[i](tensor)
 
@@ -133,13 +117,7 @@ def generate_feature_maps(model_blocks, tensor, save_path, layer_num):
         plt.axis('off')
     plt.savefig(save_path, bbox_inches='tight', pad_inches = 0)
     plt.close()
-    return None
-
-
-    
-    ######################################################################################
-    #                                   END OF YOUR CODE                                #
-    ######################################################################################    
+    return None  
 
 def augmentation():
     """Add paddings to make image shape divisible by 32"""
@@ -198,10 +176,6 @@ def add_args(parser):
         args: parsed arguments
     """
 
-    ##########################################################################
-    # TODO: Populate parser with input arguments we will use to execute code #
-    ##########################################################################
-
     # Add parser argument for "--model"
     parser.add_argument('--model', default='Linknet', help='model name')
 
@@ -209,11 +183,7 @@ def add_args(parser):
     parser.add_argument('--backbone', default='densenet169', help='backbone name')
     
     # Add parser argument for "--data_dir"
-    parser.add_argument('--image-path', default='./data_paper/11215-11.jpg', help='directory of image data')
-
-    ############################################################################
-    #                               END OF YOUR CODE                           #
-    ############################################################################
+    parser.add_argument('--image-path', default='./data/11215-11.jpg', help='directory of image data')
     
     args = parser.parse_args()
     return args    
@@ -228,11 +198,6 @@ def create_model(args, classes, activation):
         Initalized Segmentaion Model
     """
     
-    ####################################################################################################
-    # TODO: Initialize and return segmentation model through segmentation library (smp)                #
-    # TIP: Here is the link to the library repo: https://github.com/qubvel/segmentation_models.pytorch
-    ####################################################################################################
-    
     # HINT: Get the model name and args from parser
     model = smp.Linknet(
         encoder_name=args.backbone,  # choose encoder, e.g. mobilenet_v2 or efficientnet-b7
@@ -241,19 +206,10 @@ def create_model(args, classes, activation):
         classes=classes,
         activation=activation
     )
-    
-
-    ####################################################################################################
-    #                                               END OF YOUR CODE                                   #
-    ####################################################################################################
-
     return model
 
 if __name__ == "__main__":
 
-    #########################################################################################
-    # You need to complete TODO block in the add_args function to proceed at this point #
-    #########################################################################################
     parser = argparse.ArgumentParser()
     args = add_args(parser)
 
@@ -286,22 +242,11 @@ if __name__ == "__main__":
     n_classes = 1
     activation = 'sigmoid'
 
-    #################################################################################################
-    # You need to complete TODO block in the create_model function to proceed at this point         #
-    # In addition to that, you need to download the model weights from the following drive          #
-    # Weights: https://drive.google.com/drive/folders/1yQGjA0sZbQFKC3Nk4lQ-0IsA067VUBdp?usp=sharing #
-    # Please save the weights in the same directory where this file resides                         #
-    #################################################################################################
 
     best_model = create_model(args, n_classes, activation)
     best_model = nn.DataParallel(best_model, device_ids=[0])
-    checkpoint = torch.load('./logs/best_model_iou_paper.pth', map_location=DEVICE)
+    checkpoint = torch.load('./best_model_iou.pth', map_location=DEVICE)
     best_model.load_state_dict(checkpoint['model_state_dict'])
-
-
-    #########################################################################################
-    # You need to complete TODO block in the get_children function to proceed at this point #
-    #########################################################################################
 
     # Populate get_children function to flatten the model architecture
     model_children = get_children(best_model)
@@ -312,21 +257,11 @@ if __name__ == "__main__":
     conv_layers = []
     model_weights = []
 
-    ###########################################################################################
-    # TODO: Fetch all the convolutional layers and their corresponding model weights          #
-    ###########################################################################################
-
-    ### HINT:
-    # Iterate through model children you just flattened.
     # Append the layers of interest and their weights to the respective lists initalized above.
     for layer in model_children:
         if isinstance(layer, nn.Conv2d):
             conv_layers.append(layer)
             model_weights.append(layer.weight)
-    
-    ###########################################################################################
-    #                                       END OF YOUR CODE                                  #
-    ###########################################################################################
 
     assert len(conv_layers) == 179, "Total conv Layers should be 179!"
     assert len(model_weights) == 179, "Should have weghts for all (179) Convolutional Layers!"
@@ -340,7 +275,6 @@ if __name__ == "__main__":
 
     model_blocks = []
     #####################################################################################
-    # TODO: Populate model_blocks list with all the first-level features of encoder and 
     # first-level blocks of decoder #
     #####################################################################################
 
@@ -355,10 +289,6 @@ if __name__ == "__main__":
     for i in best_model.module.decoder.blocks:
         model_blocks.append(i)
     
-    ####################################################################################
-    #                                   END OF YOUR CODE                               #
-    ####################################################################################
-    
     assert len(model_blocks) == 17, "Number of model (encoder+decoder) blocks should be 17!"
     print('Total blocks: ',  len(model_blocks))
 
@@ -369,9 +299,6 @@ if __name__ == "__main__":
     # Align the image dimensions
     x_tensor = image.to(DEVICE).unsqueeze(0)
 
-    ########################################################################################################
-    # You need to complete TODO block in the generate_feature_maps function to successfully run this loop
-    ########################################################################################################
     for i in range(len(model_blocks)):
         save_path = os.path.join('./feature_maps', 'layer_' + str(i) +'.pdf')
         generate_feature_maps(model_blocks, x_tensor, save_path, i)
